@@ -120,7 +120,7 @@ export function HowItWorksSection() {
         {/* Bottom CTA */}
         <div className="text-center">
           <Link
-            href="/site/get-a-quote"
+            href="/get-a-quote"
             className="btn-primary-lg pulse-yellow inline-flex"
           >
             Comenzar Ahora — Es Completamente Gratis

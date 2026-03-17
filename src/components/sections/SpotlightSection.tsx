@@ -7,7 +7,7 @@ const spotlights = [
     title: 'Pago Inicial\nDesde $0',
     description: 'Opciones de seguro sin enganche. Pagos mensuales que se adaptan a tu bolsillo real.',
     cta: 'Cotizar seguro',
-    href: '/site/get-a-quote',
+    href: '/get-a-quote',
     style: 'yellow',
   },
   {
@@ -23,7 +23,7 @@ const spotlights = [
     title: 'DMV\nSin Filas',
     description: 'Títulos, transferencias, registro. Nosotros hacemos el trámite por ti.',
     cta: 'Ver servicios DMV',
-    href: '/site/dmv-services',
+    href: '/dmv-services',
     style: 'blue',
   },
   {

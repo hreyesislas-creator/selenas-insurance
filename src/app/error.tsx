@@ -38,7 +38,7 @@ export default function GlobalError({ error, reset }: ErrorProps) {
           >
             <RefreshCw size={16} /> Intentar de nuevo
           </button>
-          <Link href="/site" className="btn-secondary w-full justify-center">
+          <Link href="/" className="btn-secondary w-full justify-center">
             Volver al inicio
           </Link>
           <a

@@ -13,10 +13,10 @@ const WA_ICON = () => (
 )
 
 const navLinks = [
-  { href: '/site/auto-insurance', label: 'Seguro de Auto' },
-  { href: '/site/dmv-services', label: 'Servicios DMV' },
-  { href: '/site/notary-tax', label: 'Notario y Taxes' },
-  { href: '/site/contact', label: 'Contacto' },
+  { href: '/auto-insurance', label: 'Seguro de Auto' },
+  { href: '/dmv-services', label: 'Servicios DMV' },
+  { href: '/notary-tax', label: 'Notario y Taxes' },
+  { href: '/contact', label: 'Contacto' },
 ]
 
 export function Header() {
@@ -76,7 +76,7 @@ export function Header() {
         {/* Main bar */}
         <div className="max-w-7xl mx-auto px-4 h-16 flex items-center justify-between gap-4">
           {/* Logo */}
-          <Link href="/site" className="flex items-center gap-3 shrink-0">
+          <Link href="/" className="flex items-center gap-3 shrink-0">
             <div
               className="w-9 h-9 rounded-[10px] flex items-center justify-center shadow-sm"
               style={{ background: 'var(--yellow)' }}
@@ -127,7 +127,7 @@ export function Header() {
               <WA_ICON /> WhatsApp
             </a>
             <Link
-              href="/site/get-a-quote"
+              href="/get-a-quote"
               className="btn-primary pulse-yellow"
               style={{ padding: '9px 20px', borderRadius: 'var(--radius-sm)', fontSize: '0.9rem' }}
             >
@@ -155,7 +155,7 @@ export function Header() {
         >
           {/* Close button */}
           <div className="flex items-center justify-between px-4 pt-4 pb-2">
-            <Link href="/site" onClick={() => setMenuOpen(false)} className="flex items-center gap-2.5">
+            <Link href="/" onClick={() => setMenuOpen(false)} className="flex items-center gap-2.5">
               <div className="w-9 h-9 rounded-[10px] flex items-center justify-center" style={{ background: 'var(--yellow)' }}>
                 <span className="font-display font-800 text-xl" style={{ color: 'var(--purple-dark)' }}>S</span>
               </div>
@@ -189,7 +189,7 @@ export function Header() {
 
             <div className="mt-6 grid grid-cols-1 gap-3">
               <Link
-                href="/site/get-a-quote"
+                href="/get-a-quote"
                 onClick={() => setMenuOpen(false)}
                 className="btn-primary-lg text-center animate-fade-up delay-250"
               >

@@ -24,7 +24,7 @@ export default function LandingLayout({ children }: { children: ReactNode }) {
         }}
       >
         <div className="max-w-5xl mx-auto px-4 h-14 flex items-center justify-between gap-4">
-          <Link href="/site" className="flex items-center gap-2.5">
+          <Link href="/" className="flex items-center gap-2.5">
             <div
               className="w-8 h-8 rounded-[9px] flex items-center justify-center"
               style={{ background: 'var(--yellow)' }}
@@ -45,7 +45,7 @@ export default function LandingLayout({ children }: { children: ReactNode }) {
               <Phone size={13} /> {BUSINESS.phone}
             </a>
             <Link
-              href="/site/get-a-quote"
+              href="/get-a-quote"
               className="btn-primary text-sm"
               style={{ padding: '9px 18px', borderRadius: 'var(--radius-sm)', fontSize: '0.875rem' }}
             >
@@ -63,7 +63,7 @@ export default function LandingLayout({ children }: { children: ReactNode }) {
           <span className="text-xs" style={{ color: 'rgba(255,255,255,0.25)' }}>
             © {new Date().getFullYear()} Selena&apos;s Insurance · {BUSINESS.address}
           </span>
-          <Link href="/site" className="text-xs transition-colors" style={{ color: 'rgba(255,255,255,0.35)' }}>
+          <Link href="/" className="text-xs transition-colors" style={{ color: 'rgba(255,255,255,0.35)' }}>
             ← Volver al sitio principal
           </Link>
         </div>

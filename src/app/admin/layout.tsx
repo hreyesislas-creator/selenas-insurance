@@ -22,7 +22,7 @@ export default function AdminLayout({ children }: { children: ReactNode }) {
           </div>
         </div>
         <Link
-          href="/site"
+          href="/"
           className="text-gray-400 hover:text-white text-sm transition-colors"
         >
           ← Volver al sitio

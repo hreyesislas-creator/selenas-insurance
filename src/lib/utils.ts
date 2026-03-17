@@ -11,8 +11,8 @@ export function cn(...inputs: ClassValue[]) {
  * Priority: env vars → hardcoded defaults
  *
  * For production, set these in Vercel environment variables:
- *   NEXT_PUBLIC_BUSINESS_PHONE   — e.g. (951) 555-1234
- *   NEXT_PUBLIC_BUSINESS_WHATSAPP — e.g. 19515551234  (no + or spaces)
+ *   NEXT_PUBLIC_BUSINESS_PHONE   — e.g. (661) 529-0178
+ *   NEXT_PUBLIC_BUSINESS_WHATSAPP — e.g. 16615290178  (no + or spaces)
  *   NEXT_PUBLIC_BUSINESS_ADDRESS — e.g. 123 Main St, Moreno Valley, CA 92551
  *   NEXT_PUBLIC_BUSINESS_HOURS   — e.g. Lun–Vie 9am–6pm · Sáb 9am–3pm
  *   NEXT_PUBLIC_BUSINESS_EMAIL   — e.g. info@selenasinsurance.com
@@ -25,8 +25,8 @@ export const BUSINESS = {
   name: "Selena's Insurance",
 
   // ── REPLACE THESE BEFORE LAUNCH ──────────────────────────────────────
-  phone:        process.env.NEXT_PUBLIC_BUSINESS_PHONE     ?? '(951) 000-0000',
-  whatsapp:     process.env.NEXT_PUBLIC_BUSINESS_WHATSAPP  ?? '19510000000',
+  phone:        process.env.NEXT_PUBLIC_BUSINESS_PHONE     ?? '(661) 529-0178',
+  whatsapp:     process.env.NEXT_PUBLIC_BUSINESS_WHATSAPP  ?? '16615290178',
   address:      process.env.NEXT_PUBLIC_BUSINESS_ADDRESS   ?? '1234 Main St, Moreno Valley, CA 92551',
   hours:        process.env.NEXT_PUBLIC_BUSINESS_HOURS     ?? 'Lun–Vie 9am–6pm · Sáb 9am–3pm',
   email:        process.env.NEXT_PUBLIC_BUSINESS_EMAIL     ?? 'info@selenasinsurance.com',

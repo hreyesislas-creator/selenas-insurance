@@ -9,12 +9,12 @@ const WA_ICON = () => (
 )
 
 const services = [
-  { href: '/site/auto-insurance', label: 'Seguro de Auto' },
+  { href: '/auto-insurance', label: 'Seguro de Auto' },
   { href: '/landing/sr22-insurance', label: 'SR22' },
-  { href: '/site/dmv-services', label: 'Servicios DMV' },
+  { href: '/dmv-services', label: 'Servicios DMV' },
   { href: '/landing/plates-registration', label: 'Placas y Registro' },
-  { href: '/site/notary-tax', label: 'Notario Público' },
-  { href: '/site/notary-tax#taxes', label: 'Preparación de Taxes' },
+  { href: '/notary-tax', label: 'Notario Público' },
+  { href: '/notary-tax#taxes', label: 'Preparación de Taxes' },
 ]
 
 const resources = [
@@ -22,7 +22,7 @@ const resources = [
   { href: '/landing/sr22-insurance', label: 'SR22 en California' },
   { href: '/landing/plates-registration', label: 'Renovar Placas' },
   { href: '/landing/dmv-near-you', label: 'DMV Cerca de Mí' },
-  { href: '/site/get-a-quote', label: 'Obtener Cotización' },
+  { href: '/get-a-quote', label: 'Obtener Cotización' },
 ]
 
 export function Footer() {
@@ -66,7 +66,7 @@ export function Footer() {
 
         {/* Brand */}
         <div className="lg:col-span-1">
-          <Link href="/site" className="flex items-center gap-3 mb-5">
+          <Link href="/" className="flex items-center gap-3 mb-5">
             <div
               className="w-10 h-10 rounded-[10px] flex items-center justify-center"
               style={{ background: 'var(--yellow)' }}

@@ -18,7 +18,7 @@ export default function NotFound() {
 
       <div className="max-w-md w-full">
         {/* Logo */}
-        <Link href="/site" className="inline-flex items-center gap-3 mb-10">
+        <Link href="/" className="inline-flex items-center gap-3 mb-10">
           <div
             className="w-12 h-12 rounded-2xl flex items-center justify-center"
             style={{ background: 'var(--yellow)' }}
@@ -46,13 +46,13 @@ export default function NotFound() {
         {/* Actions */}
         <div className="flex flex-col gap-3">
           <Link
-            href="/site"
+            href="/"
             className="btn-primary-lg w-full justify-center"
           >
             Volver al inicio
           </Link>
           <Link
-            href="/site/get-a-quote"
+            href="/get-a-quote"
             className="btn-ghost w-full justify-center"
           >
             Obtener cotización gratis

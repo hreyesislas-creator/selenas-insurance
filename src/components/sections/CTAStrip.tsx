@@ -80,7 +80,7 @@ export function CTAStrip({
 
           {/* Online quote */}
           <Link
-            href="/site/get-a-quote"
+            href="/get-a-quote"
             className="w-full sm:w-auto flex items-center justify-center gap-2.5 rounded-2xl font-display font-700 transition-all duration-150"
             style={{
               background: 'white',

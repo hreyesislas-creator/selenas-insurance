@@ -55,7 +55,7 @@ export function MobileCTABar() {
 
         {/* QUOTE — dominant center button */}
         <Link
-          href="/site/get-a-quote"
+          href="/get-a-quote"
           className="flex flex-col items-center justify-center gap-1.5 py-2 transition-all active:scale-95"
         >
           <div

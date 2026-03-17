@@ -160,7 +160,7 @@ export function ContactSection() {
 
               <div className="flex flex-col gap-3">
                 <Link
-                  href="/site/get-a-quote"
+                  href="/get-a-quote"
                   className="btn-primary-lg w-full justify-center pulse-yellow"
                 >
                   Cotizar Gratis Ahora

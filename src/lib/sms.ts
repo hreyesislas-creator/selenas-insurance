@@ -7,8 +7,8 @@
  * Setup (all optional):
  *   TWILIO_ACCOUNT_SID     — from console.twilio.com
  *   TWILIO_AUTH_TOKEN      — from console.twilio.com
- *   TWILIO_PHONE_NUMBER    — your Twilio number, e.g. +19515550000
- *   BUSINESS_OWNER_PHONE   — owner's phone for notifications, e.g. +19515551234
+ *   TWILIO_PHONE_NUMBER    — your Twilio number, e.g. +16615290178
+ *   BUSINESS_OWNER_PHONE   — owner's phone for notifications, e.g. +16615290178
  *   NEXT_PUBLIC_BUSINESS_PHONE — shown in the SMS confirmation message
  */
 
@@ -65,7 +65,7 @@ export async function sendLeadConfirmationSMS(
   phone: string,
   name: string
 ): Promise<boolean> {
-  const businessPhone = process.env.NEXT_PUBLIC_BUSINESS_PHONE ?? '(951) 000-0000'
+  const businessPhone = process.env.NEXT_PUBLIC_BUSINESS_PHONE ?? '(661) 529-0178'
   const body =
     `Hola ${name}, recibimos tu solicitud en Selena's Insurance. ` +
     `Nos comunicaremos contigo muy pronto. ` +

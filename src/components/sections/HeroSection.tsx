@@ -1,6 +1,6 @@
-import Link from 'next/link'
 import { Phone, Shield, Star, Clock, CheckCircle } from 'lucide-react'
 import { BUSINESS, getWhatsAppUrl } from '@/lib/utils'
+import { LeadForm } from '@/components/forms/LeadForm'
 
 const WA_ICON = () => (
   <svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor" aria-hidden>
@@ -27,38 +27,33 @@ export function HeroSection() {
       className="relative overflow-hidden"
       style={{ background: 'var(--purple-dark)' }}
     >
-      {/* ── Background layers ── */}
-      {/* California stripe: the thick yellow top bar */}
+      {/* ── Yellow top stripe ── */}
       <div className="absolute top-0 left-0 right-0 h-1.5" style={{ background: 'var(--yellow)' }} />
 
-      {/* Subtle diagonal texture */}
-      <div className="absolute inset-0 stripe-pattern opacity-100" />
-
-      {/* Right-side purple gradient glow */}
+      {/* ── Background layers ── */}
+      <div className="absolute inset-0 stripe-pattern" />
       <div
         className="absolute top-0 right-0 w-2/3 h-full pointer-events-none"
         style={{
-          background: 'radial-gradient(ellipse 60% 70% at 85% 40%, rgba(115,64,176,0.35) 0%, transparent 70%)',
+          background: 'radial-gradient(ellipse 60% 70% at 85% 40%, rgba(115,64,176,0.30) 0%, transparent 70%)',
         }}
       />
-
-      {/* Bottom left warm glow */}
       <div
         className="absolute bottom-0 left-0 w-1/2 h-1/2 pointer-events-none"
         style={{
-          background: 'radial-gradient(ellipse 60% 60% at 20% 100%, rgba(245,196,0,0.08) 0%, transparent 70%)',
+          background: 'radial-gradient(ellipse 60% 60% at 20% 100%, rgba(245,196,0,0.06) 0%, transparent 70%)',
         }}
       />
 
-      <div className="relative max-w-7xl mx-auto px-4 pt-12 pb-0 md:pt-16">
+      <div className="relative max-w-7xl mx-auto px-4 pt-10 pb-0 md:pt-14">
         <div className="grid grid-cols-1 lg:grid-cols-2 gap-8 lg:gap-12 items-start">
 
-          {/* ── LEFT: Copy ──────────────────────────────── */}
-          <div className="text-white pt-2 pb-10 lg:pb-16">
+          {/* ── LEFT: Headline + copy + CTAs ─────────── */}
+          <div className="text-white pt-2 pb-8 lg:pb-14">
 
             {/* Location badge */}
             <div
-              className="inline-flex items-center gap-2 text-xs font-700 uppercase tracking-widest rounded-full px-4 py-2 mb-6 animate-fade-up"
+              className="inline-flex items-center gap-2 text-xs font-700 uppercase tracking-widest rounded-full px-4 py-2 mb-5 animate-fade-up"
               style={{
                 background: 'rgba(245,196,0,0.12)',
                 border: '1px solid rgba(245,196,0,0.30)',
@@ -71,9 +66,9 @@ export function HeroSection() {
 
             {/* Main headline */}
             <h1
-              className="font-display font-800 text-white mb-5 animate-fade-up delay-75"
+              className="font-display font-800 text-white mb-4 animate-fade-up delay-75"
               style={{
-                fontSize: 'clamp(2.6rem, 6.5vw, 4.75rem)',
+                fontSize: 'clamp(2.4rem, 5.5vw, 4.25rem)',
                 lineHeight: '1.0',
                 letterSpacing: '-0.03em',
               }}
@@ -85,43 +80,40 @@ export function HeroSection() {
 
             {/* Subheadline */}
             <p
-              className="text-lg md:text-xl leading-relaxed mb-7 animate-fade-up delay-150"
-              style={{ color: 'rgba(255,255,255,0.75)', maxWidth: '480px' }}
+              className="text-lg leading-relaxed mb-6 animate-fade-up delay-150"
+              style={{ color: 'rgba(255,255,255,0.72)', maxWidth: '460px' }}
             >
-              Ayuda rápida. Precios accesibles. Atención personalizada en español.
-              Cotiza por teléfono, WhatsApp o en línea — como prefieras.
+              Ayuda rápida, precios accesibles y atención personalizada en español.
+              Cotiza por teléfono, WhatsApp o en línea.
             </p>
 
             {/* Highlight checklist */}
-            <ul className="grid grid-cols-2 gap-2 mb-8 animate-fade-up delay-250">
+            <ul className="grid grid-cols-2 gap-y-2 gap-x-3 mb-7 animate-fade-up delay-250">
               {highlights.map((item) => (
-                <li key={item} className="flex items-center gap-2 text-sm font-500" style={{ color: 'rgba(255,255,255,0.80)' }}>
+                <li key={item} className="flex items-center gap-2 text-sm font-500" style={{ color: 'rgba(255,255,255,0.82)' }}>
                   <CheckCircle size={14} style={{ color: 'var(--yellow)', flexShrink: 0 }} />
                   {item}
                 </li>
               ))}
             </ul>
 
-            {/* CTA cluster */}
-            <div className="flex flex-col sm:flex-row gap-3 mb-8 animate-fade-up delay-350">
-              <Link href="/site/get-a-quote" className="btn-primary-lg pulse-yellow text-center">
-                Cotización Gratis
-              </Link>
+            {/* Secondary CTA buttons — phone + WA for visitors who want to call now */}
+            <div className="flex flex-wrap gap-3 mb-7 animate-fade-up delay-350">
               <a
                 href={getWhatsAppUrl()}
                 target="_blank"
                 rel="noopener noreferrer"
-                className="btn-whatsapp text-center"
-                style={{ padding: '17px 28px', borderRadius: 'var(--radius-lg)', fontSize: '1.0625rem' }}
+                className="btn-whatsapp"
+                style={{ padding: '13px 22px', borderRadius: 'var(--radius-md)', fontSize: '0.9375rem' }}
               >
                 <WA_ICON /> WhatsApp
               </a>
               <a
                 href={`tel:${BUSINESS.phone}`}
-                className="btn-ghost text-center"
-                style={{ padding: '16px 24px', borderRadius: 'var(--radius-lg)', fontSize: '1rem' }}
+                className="btn-ghost"
+                style={{ padding: '12px 22px', borderRadius: 'var(--radius-md)', fontSize: '0.9375rem' }}
               >
-                <Phone size={17} /> Llamar
+                <Phone size={16} /> {BUSINESS.phone}
               </a>
             </div>
 
@@ -134,136 +126,131 @@ export function HeroSection() {
                 </span>
               ))}
             </div>
-          </div>
 
-          {/* ── RIGHT: Plate visual card ──────────────── */}
-          <div
-            className="hidden lg:block relative self-end animate-fade-up delay-250"
-            style={{ marginBottom: '0' }}
-          >
-            {/* Shadow platform */}
+            {/* ── Plate accent — desktop only, below trust pills ── */}
+            {/* Kept as a compact brand detail, not replacing the form */}
             <div
-              className="absolute bottom-0 left-1/2 -translate-x-1/2 w-4/5 h-12 rounded-full blur-2xl opacity-40"
-              style={{ background: 'rgba(0,0,0,0.5)' }}
-            />
-
-            {/* Main plate card */}
-            <div
-              className="relative mx-auto w-[380px]"
+              className="hidden lg:flex items-center gap-3 mt-8 animate-fade-up delay-650"
               style={{
-                background: 'white',
-                borderRadius: '20px 20px 0 0',
-                overflow: 'hidden',
-                boxShadow: '0 -6px 60px rgba(0,0,0,0.4), 0 0 0 1px rgba(255,255,255,0.1)',
+                background: 'rgba(255,255,255,0.06)',
+                border: '1px solid rgba(255,255,255,0.10)',
+                borderRadius: 'var(--radius-md)',
+                padding: '10px 16px',
+                maxWidth: 'max-content',
               }}
             >
-              {/* CA plate top stripe */}
+              {/* Mini CA plate */}
               <div
-                className="h-10 flex items-center justify-center relative"
-                style={{ background: 'var(--blue-ca)' }}
+                className="flex items-center gap-2 px-3 py-1.5 rounded-lg"
+                style={{ background: 'white' }}
               >
-                <span
-                  className="font-display font-800 text-white text-xs tracking-[0.5em] uppercase"
-                  style={{ letterSpacing: '0.45em' }}
-                >
-                  California
-                </span>
                 <div
-                  className="absolute left-3 w-5 h-5 rounded-full flex items-center justify-center"
-                  style={{ background: 'rgba(255,255,255,0.15)' }}
+                  className="w-4 h-4 rounded-sm flex items-center justify-center"
+                  style={{ background: 'var(--blue-ca)' }}
                 >
-                  <span className="text-white text-[8px] font-800">CA</span>
+                  <span className="text-white text-[7px] font-800 leading-none">CA</span>
                 </div>
-              </div>
-
-              {/* Plate body */}
-              <div className="py-8 px-6 flex flex-col items-center text-center bg-white">
-                <div
-                  className="font-display font-800 text-center tracking-[0.18em] mb-1"
-                  style={{
-                    fontSize: '3.5rem',
-                    color: 'var(--purple-dark)',
-                    letterSpacing: '0.18em',
-                    lineHeight: 1,
-                  }}
+                <span
+                  className="font-display font-800 tracking-widest"
+                  style={{ color: 'var(--purple-dark)', fontSize: '0.9rem', letterSpacing: '0.2em' }}
                 >
                   SELENA
-                </div>
-                <div
-                  className="font-display font-700 tracking-widest text-base mb-4"
-                  style={{ color: 'var(--gray-500)', letterSpacing: '0.12em' }}
-                >
-                  Insurance &amp; DMV
-                </div>
-
-                {/* Service pills on plate */}
-                <div className="flex gap-2 flex-wrap justify-center">
-                  {[
-                    { label: 'Seguros', bg: 'var(--yellow)', color: 'var(--purple-dark)' },
-                    { label: 'DMV', bg: 'var(--purple)', color: 'white' },
-                    { label: 'SR22', bg: 'var(--red)', color: 'white' },
-                    { label: 'Notario', bg: 'var(--blue-ca)', color: 'white' },
-                  ].map(({ label, bg, color }) => (
-                    <span
-                      key={label}
-                      className="text-xs font-800 uppercase tracking-wider px-3 py-1.5 rounded-full"
-                      style={{ background: bg, color }}
-                    >
-                      {label}
-                    </span>
-                  ))}
-                </div>
+                </span>
+                <div className="w-2 h-full" style={{ background: 'var(--yellow)', borderRadius: '1px' }} />
               </div>
-
-              {/* Plate bottom stripe */}
-              <div className="h-3" style={{ background: 'var(--yellow)' }} />
+              <div className="flex gap-1.5">
+                {['Seguros', 'DMV', 'SR22'].map((label, i) => (
+                  <span
+                    key={label}
+                    className="text-[10px] font-800 uppercase tracking-wider px-2 py-1 rounded-full"
+                    style={{
+                      background: i === 0 ? 'var(--yellow)' : i === 1 ? 'var(--purple)' : 'var(--red)',
+                      color: i === 0 ? 'var(--purple-dark)' : 'white',
+                    }}
+                  >
+                    {label}
+                  </span>
+                ))}
+              </div>
             </div>
+          </div>
 
-            {/* Floating stat cards */}
+          {/* ── RIGHT: Lead capture form — THE conversion engine ── */}
+          <div className="animate-fade-up delay-150 pb-0 lg:pb-0">
+            {/* Form card — raised, prominent */}
             <div
-              className="absolute -left-12 top-12 rounded-2xl p-3.5 animate-fade-up delay-500"
+              className="rounded-2xl overflow-hidden"
               style={{
                 background: 'white',
-                boxShadow: 'var(--shadow-lift)',
-                border: '3px solid var(--yellow)',
-                minWidth: '130px',
+                boxShadow: '0 24px 64px rgba(0,0,0,0.35), 0 0 0 1px rgba(255,255,255,0.12)',
               }}
             >
-              <div className="text-[10px] font-600 uppercase tracking-wide mb-0.5" style={{ color: 'var(--gray-500)' }}>
-                Pago inicial desde
-              </div>
+              {/* Form header bar */}
               <div
-                className="font-display font-800 text-2xl leading-none"
-                style={{ color: 'var(--purple-dark)' }}
+                className="px-6 py-4 flex items-center justify-between"
+                style={{ background: 'var(--yellow)' }}
               >
-                $0 Down
+                <div>
+                  <h2 className="font-display font-800 text-lg leading-none" style={{ color: 'var(--purple-dark)' }}>
+                    Cotización Gratis
+                  </h2>
+                  <p className="text-xs font-600 mt-0.5" style={{ color: 'rgba(50,22,92,0.65)' }}>
+                    2 minutos · Sin compromiso · Respuesta hoy
+                  </p>
+                </div>
+                {/* Small CA plate badge on form header */}
+                <div
+                  className="hidden sm:flex items-center gap-1 px-2.5 py-1 rounded-lg"
+                  style={{ background: 'rgba(50,22,92,0.12)' }}
+                >
+                  <div
+                    className="w-3.5 h-3.5 rounded-sm flex items-center justify-center"
+                    style={{ background: 'var(--blue-ca)' }}
+                  >
+                    <span className="text-white text-[6px] font-800 leading-none">CA</span>
+                  </div>
+                  <span className="font-display font-800 text-xs tracking-widest" style={{ color: 'var(--purple-dark)', letterSpacing: '0.18em' }}>
+                    SELENA
+                  </span>
+                </div>
+              </div>
+
+              {/* Form body */}
+              <div className="p-5 md:p-6">
+                <LeadForm sourcePage="hero-form" />
               </div>
             </div>
 
-            <div
-              className="absolute -right-8 top-1/3 rounded-2xl p-3.5 animate-fade-up delay-650"
-              style={{
-                background: 'var(--yellow)',
-                boxShadow: 'var(--shadow-yellow)',
-                minWidth: '120px',
-              }}
-            >
-              <div className="text-[10px] font-600 uppercase tracking-wide mb-0.5" style={{ color: 'var(--purple-dark)', opacity: 0.7 }}>
-                Respuesta
-              </div>
-              <div
-                className="font-display font-800 text-xl leading-none"
-                style={{ color: 'var(--purple-dark)' }}
-              >
-                Hoy Mismo
-              </div>
+            {/* Floating stat pills below the form card */}
+            <div className="flex items-center justify-center gap-3 mt-4 pb-6 flex-wrap">
+              {[
+                { value: '$0', label: 'enganche disponible' },
+                { value: '+200', label: 'clientes felices' },
+                { value: '<1hr', label: 'tiempo de respuesta' },
+              ].map(({ value, label }) => (
+                <div
+                  key={label}
+                  className="flex items-baseline gap-1.5 px-3 py-1.5 rounded-full"
+                  style={{
+                    background: 'rgba(255,255,255,0.08)',
+                    border: '1px solid rgba(255,255,255,0.14)',
+                  }}
+                >
+                  <span className="font-display font-800 text-sm" style={{ color: 'var(--yellow)' }}>
+                    {value}
+                  </span>
+                  <span className="text-xs font-500" style={{ color: 'rgba(255,255,255,0.55)' }}>
+                    {label}
+                  </span>
+                </div>
+              ))}
             </div>
           </div>
 
         </div>
       </div>
 
-      {/* ── Curved separator ── */}
+      {/* ── Curved separator into next section ── */}
       <div className="relative h-10 md:h-14" style={{ background: 'var(--purple-dark)' }}>
         <svg
           viewBox="0 0 1440 56"
