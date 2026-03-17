@@ -1,13 +1,14 @@
 /** @type {import('next').NextConfig} */
 const nextConfig = {
+  // Twilio is a CommonJS module — keep it server-side only, never bundled by webpack
+  // NOTE: In Next.js 14.1+, this moved out of experimental
+  serverExternalPackages: ['twilio'],
+
   images: {
     remotePatterns: [],
   },
-  // Tell Next.js to bundle Twilio server-side only (it's CommonJS)
-  experimental: {
-    serverComponentsExternalPackages: ['twilio'],
-  },
-  // Disable x-powered-by header for security
+
+  // Security: don't expose Next.js version
   poweredByHeader: false,
 }
 

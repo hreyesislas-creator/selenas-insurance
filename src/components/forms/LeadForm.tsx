@@ -120,13 +120,17 @@ export function LeadForm({ sourcePage, landingPage }: LeadFormProps) {
   const [loading, setLoading] = useState(false)
   const [error, setError] = useState<string | null>(null)
   const containerRef = useRef<HTMLDivElement>(null)
+  // Track whether the user has manually advanced at least one step.
+  // Prevents scrollIntoView from firing on initial mount (step = 1 at load).
+  const hasSteppedRef = useRef(false)
 
   const totalSteps = 4
   const serviceType = data.service_type as ServiceType | undefined
   const isInsurance = serviceType === 'auto_insurance' || serviceType === 'sr22'
 
-  // Scroll to top of form on step change
+  // Scroll form into view only when the user advances a step — never on mount.
   useEffect(() => {
+    if (!hasSteppedRef.current) return
     containerRef.current?.scrollIntoView({ behavior: 'smooth', block: 'nearest' })
   }, [step])
 
@@ -137,6 +141,7 @@ export function LeadForm({ sourcePage, landingPage }: LeadFormProps) {
   const form4 = useForm<Step4Data>({ resolver: zodResolver(step4Schema) })
 
   const mergeAndNext = (stepData: Record<string, unknown>) => {
+    hasSteppedRef.current = true
     setData(prev => ({ ...prev, ...stepData }))
     setStep(s => s + 1)
   }
@@ -326,7 +331,7 @@ export function LeadForm({ sourcePage, landingPage }: LeadFormProps) {
           <div className="flex gap-2.5 mt-2">
             <button
               type="button"
-              onClick={() => setStep(1)}
+              onClick={() => { hasSteppedRef.current = true; setStep(1) }}
               className="btn-ghost flex-1 justify-center"
               style={{ background: 'var(--off-white)', color: 'var(--gray-700)', border: '1.5px solid var(--gray-100)', backdropFilter: 'none' }}
             >
@@ -421,7 +426,7 @@ export function LeadForm({ sourcePage, landingPage }: LeadFormProps) {
           <div className="flex gap-2.5">
             <button
               type="button"
-              onClick={() => setStep(2)}
+              onClick={() => { hasSteppedRef.current = true; setStep(2) }}
               className="flex-1 justify-center flex items-center gap-2 font-700 py-3.5 rounded-[14px] transition-colors"
               style={{ background: 'var(--off-white)', color: 'var(--gray-700)', border: '1.5px solid var(--gray-100)' }}
             >
@@ -494,7 +499,7 @@ export function LeadForm({ sourcePage, landingPage }: LeadFormProps) {
           <div className="flex gap-2.5">
             <button
               type="button"
-              onClick={() => setStep(2)}
+              onClick={() => { hasSteppedRef.current = true; setStep(2) }}
               className="flex-1 justify-center flex items-center gap-2 font-700 py-3.5 rounded-[14px] transition-colors"
               style={{ background: 'var(--off-white)', color: 'var(--gray-700)', border: '1.5px solid var(--gray-100)' }}
             >
@@ -564,7 +569,7 @@ export function LeadForm({ sourcePage, landingPage }: LeadFormProps) {
           <div className="flex gap-2.5 mb-4">
             <button
               type="button"
-              onClick={() => setStep(3)}
+              onClick={() => { hasSteppedRef.current = true; setStep(3) }}
               className="flex-1 justify-center flex items-center gap-2 font-700 py-3.5 rounded-[14px] transition-colors"
               style={{ background: 'var(--off-white)', color: 'var(--gray-700)', border: '1.5px solid var(--gray-100)' }}
             >
