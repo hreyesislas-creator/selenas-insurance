@@ -4,6 +4,8 @@ import { Phone } from 'lucide-react'
 import { LeadForm } from '@/components/forms/LeadForm'
 import { CTAStrip } from '@/components/sections/CTAStrip'
 import { BUSINESS } from '@/lib/utils'
+import SiteShell from '@/components/layout/SiteShell'
+
 
 export const metadata: Metadata = {
   title: 'Servicios de DMV — Selena\'s Insurance',
@@ -24,7 +26,7 @@ const dmvServices = [
 
 export default function DMVServicesPage() {
   return (
-    <>
+    <SiteShell>
       {/* Hero */}
       <section className="bg-brand-blue py-16 md:py-20 relative overflow-hidden">
         <div className="h-2 bg-brand-yellow absolute top-0 left-0 right-0" />
@@ -103,6 +105,6 @@ export default function DMVServicesPage() {
       </section>
 
       <CTAStrip title="¿Necesitas un trámite de DMV?" subtitle="Contáctanos hoy y lo resolvemos rápido." />
-    </>
+    </SiteShell>
   )
 }

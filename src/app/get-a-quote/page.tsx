@@ -3,6 +3,8 @@ import { Phone } from 'lucide-react'
 import Link from 'next/link'
 import { LeadForm } from '@/components/forms/LeadForm'
 import { BUSINESS, getWhatsAppUrl } from '@/lib/utils'
+import SiteShell from '@/components/layout/SiteShell'
+
 
 export const metadata: Metadata = {
   title: 'Cotización Gratis — Selena\'s Insurance',
@@ -41,7 +43,7 @@ const sideItems = [
 
 export default function GetAQuotePage() {
   return (
-    <>
+    <SiteShell>
       {/* ── Page hero ── */}
       <section
         className="py-14 md:py-16 relative"
@@ -170,6 +172,6 @@ export default function GetAQuotePage() {
           </div>
         </div>
       </section>
-    </>
+    </SiteShell>
   )
 }

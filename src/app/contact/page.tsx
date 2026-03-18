@@ -1,6 +1,8 @@
 import type { Metadata } from 'next'
 import { ContactSection } from '@/components/sections/ContactSection'
 import { CTAStrip } from '@/components/sections/CTAStrip'
+import SiteShell from '@/components/layout/SiteShell'
+
 
 export const metadata: Metadata = {
   title: 'Contacto — Selena\'s Insurance',
@@ -10,7 +12,7 @@ export const metadata: Metadata = {
 
 export default function ContactPage() {
   return (
-    <>
+    <SiteShell>
       <section className="bg-brand-purple py-12 relative">
         <div className="h-2 bg-brand-yellow absolute top-0 left-0 right-0" />
         <div className="max-w-7xl mx-auto px-4 text-center text-white">
@@ -23,6 +25,6 @@ export default function ContactPage() {
 
       <ContactSection />
       <CTAStrip />
-    </>
+    </SiteShell>
   )
 }

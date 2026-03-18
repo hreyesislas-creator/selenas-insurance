@@ -5,6 +5,8 @@ import { LeadForm } from '@/components/forms/LeadForm'
 import { CTAStrip } from '@/components/sections/CTAStrip'
 import { FAQSection } from '@/components/sections/FAQSection'
 import { BUSINESS } from '@/lib/utils'
+import SiteShell from '@/components/layout/SiteShell'
+
 
 export const metadata: Metadata = {
   title: 'Seguro de Auto — Selena\'s Insurance | Moreno Valley, CA',
@@ -56,7 +58,7 @@ const benefits = [
 
 export default function AutoInsurancePage() {
   return (
-    <>
+    <SiteShell>
       {/* ── Hero ── */}
       <section className="relative overflow-hidden" style={{ background: 'var(--purple-dark)' }}>
         <div className="absolute top-0 left-0 right-0 h-1.5" style={{ background: 'var(--yellow)' }} />
@@ -244,6 +246,6 @@ export default function AutoInsurancePage() {
 
       <CTAStrip />
       <FAQSection />
-    </>
+    </SiteShell>
   )
 }

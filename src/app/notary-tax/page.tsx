@@ -2,6 +2,8 @@ import type { Metadata } from 'next'
 import Link from 'next/link'
 import { LeadForm } from '@/components/forms/LeadForm'
 import { CTAStrip } from '@/components/sections/CTAStrip'
+import SiteShell from '@/components/layout/SiteShell'
+
 
 export const metadata: Metadata = {
   title: 'Notario Público y Preparación de Taxes — Selena\'s Insurance',
@@ -33,7 +35,7 @@ const taxServices = [
 
 export default function NotaryTaxPage() {
   return (
-    <>
+    <SiteShell>
       {/* Hero */}
       <section className="bg-brand-purple py-16 md:py-20 relative">
         <div className="h-2 bg-brand-yellow absolute top-0 left-0 right-0" />
@@ -109,6 +111,6 @@ export default function NotaryTaxPage() {
       </section>
 
       <CTAStrip title="¿Necesitas notario o preparar tus taxes?" subtitle="Llámanos o mándanos WhatsApp — te atendemos en español." />
-    </>
+    </SiteShell>
   )
 }
