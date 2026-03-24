@@ -1,3 +1,4 @@
+import Image from 'next/image'
 import Link from 'next/link'
 import { Phone, MapPin, Clock, Mail } from 'lucide-react'
 import { BUSINESS, getWhatsAppUrl } from '@/lib/utils'
@@ -28,8 +29,6 @@ const resources = [
 export function Footer() {
   return (
     <footer style={{ background: 'var(--purple-ink)' }}>
-
-      {/* ── Pre-footer CTA bar ── */}
       <div style={{ background: 'var(--purple-dark)', borderBottom: '1px solid rgba(255,255,255,0.07)' }}>
         <div className="max-w-7xl mx-auto px-4 py-6 flex flex-col sm:flex-row items-center justify-between gap-4">
           <div>
@@ -61,26 +60,16 @@ export function Footer() {
         </div>
       </div>
 
-      {/* ── Main footer grid ── */}
       <div className="max-w-7xl mx-auto px-4 py-14 grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-10">
-
-        {/* Brand */}
         <div className="lg:col-span-1">
-          <Link href="/" className="flex items-center gap-3 mb-5">
-            <div
-              className="w-10 h-10 rounded-[10px] flex items-center justify-center"
-              style={{ background: 'var(--yellow)' }}
-            >
-              <span className="font-display font-800 text-xl" style={{ color: 'var(--purple-dark)' }}>S</span>
-            </div>
-            <div>
-              <div className="font-display font-800 text-white text-base leading-none">
-                Selena&apos;s Insurance
-              </div>
-              <div className="text-[11px] mt-0.5" style={{ color: 'rgba(255,255,255,0.35)' }}>
-                Moreno Valley, CA
-              </div>
-            </div>
+          <Link href="/" className="flex items-center mb-5">
+            <Image
+              src="/logo.png"
+              alt="Selena's Insurance"
+              width={190}
+              height={60}
+              className="h-auto w-[170px] sm:w-[180px] lg:w-[190px]"
+            />
           </Link>
 
           <p className="text-sm leading-relaxed mb-6" style={{ color: 'rgba(255,255,255,0.45)' }}>
@@ -88,7 +77,6 @@ export function Footer() {
             en español. Sirviendo al Inland Empire con orgullo.
           </p>
 
-          {/* Social / WhatsApp pill */}
           <a
             href={getWhatsAppUrl()}
             target="_blank"
@@ -100,7 +88,6 @@ export function Footer() {
           </a>
         </div>
 
-        {/* Services */}
         <div>
           <h4 className="font-display font-700 text-sm uppercase tracking-widest mb-5" style={{ color: 'var(--yellow)' }}>
             Servicios
@@ -120,7 +107,6 @@ export function Footer() {
           </ul>
         </div>
 
-        {/* Resources */}
         <div>
           <h4 className="font-display font-700 text-sm uppercase tracking-widest mb-5" style={{ color: 'var(--yellow)' }}>
             Recursos
@@ -140,7 +126,6 @@ export function Footer() {
           </ul>
         </div>
 
-        {/* Contact */}
         <div>
           <h4 className="font-display font-700 text-sm uppercase tracking-widest mb-5" style={{ color: 'var(--yellow)' }}>
             Contacto
@@ -191,7 +176,6 @@ export function Footer() {
         </div>
       </div>
 
-      {/* ── Bottom bar ── */}
       <div style={{ borderTop: '1px solid rgba(255,255,255,0.06)' }}>
         <div className="max-w-7xl mx-auto px-4 py-4 flex flex-col sm:flex-row items-center justify-between gap-2">
           <span className="text-xs" style={{ color: 'rgba(255,255,255,0.25)' }}>

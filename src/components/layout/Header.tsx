@@ -1,5 +1,6 @@
 'use client'
 
+import Image from 'next/image'
 import { useState, useEffect } from 'react'
 import Link from 'next/link'
 import { Menu, X, Phone, ChevronDown } from 'lucide-react'
@@ -29,10 +30,11 @@ export function Header() {
     return () => window.removeEventListener('scroll', handler)
   }, [])
 
-  // Lock body scroll when menu is open
   useEffect(() => {
     document.body.style.overflow = menuOpen ? 'hidden' : ''
-    return () => { document.body.style.overflow = '' }
+    return () => {
+      document.body.style.overflow = ''
+    }
   }, [menuOpen])
 
   return (
@@ -76,29 +78,15 @@ export function Header() {
         {/* Main bar */}
         <div className="max-w-7xl mx-auto px-4 h-16 flex items-center justify-between gap-4">
           {/* Logo */}
-          <Link href="/" className="flex items-center gap-3 shrink-0">
-            <div
-              className="w-9 h-9 rounded-[10px] flex items-center justify-center shadow-sm"
-              style={{ background: 'var(--yellow)' }}
-            >
-              <span
-                className="font-display font-800 text-xl leading-none"
-                style={{ color: 'var(--purple-dark)' }}
-              >
-                S
-              </span>
-            </div>
-            <div className="leading-none">
-              <div
-                className="font-display font-800 text-[15px] leading-tight tracking-tight"
-                style={{ color: 'var(--purple-dark)' }}
-              >
-                Selena&apos;s Insurance
-              </div>
-              <div className="text-[10px] font-500 mt-0.5" style={{ color: 'var(--gray-500)' }}>
-                Seguros · DMV · Notario · Taxes
-              </div>
-            </div>
+          <Link href="/" className="flex items-center shrink-0">
+            <Image
+              src="/logo.png"
+              alt="Selena's Insurance"
+              width={210}
+              height={56}
+              priority
+              className="h-auto w-[170px] sm:w-[190px] lg:w-[210px]"
+            />
           </Link>
 
           {/* Desktop nav */}
@@ -155,11 +143,15 @@ export function Header() {
         >
           {/* Close button */}
           <div className="flex items-center justify-between px-4 pt-4 pb-2">
-            <Link href="/" onClick={() => setMenuOpen(false)} className="flex items-center gap-2.5">
-              <div className="w-9 h-9 rounded-[10px] flex items-center justify-center" style={{ background: 'var(--yellow)' }}>
-                <span className="font-display font-800 text-xl" style={{ color: 'var(--purple-dark)' }}>S</span>
-              </div>
-              <span className="font-display font-700 text-white text-base">Selena&apos;s Insurance</span>
+            <Link href="/" onClick={() => setMenuOpen(false)} className="flex items-center">
+              <Image
+                src="/logo.png"
+                alt="Selena's Insurance"
+                width={180}
+                height={52}
+                priority
+                className="h-auto w-[165px]"
+              />
             </Link>
             <button
               onClick={() => setMenuOpen(false)}
@@ -179,7 +171,7 @@ export function Header() {
                 style={{
                   background: 'rgba(255,255,255,0.06)',
                   border: '1px solid rgba(255,255,255,0.08)',
-                  animationDelay: `${i * 60}ms`
+                  animationDelay: `${i * 60}ms`,
                 }}
               >
                 {link.label}
