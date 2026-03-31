@@ -10,7 +10,7 @@ import SiteShell from '@/components/layout/SiteShell'
 export const metadata: Metadata = {
   title: 'Servicios de DMV — Selena\'s Insurance',
   description:
-    'Trámites de DMV sin hacer filas. Títulos, transferencias, registro, placas y más. Atención en español. Moreno Valley, CA.',
+    'Trámites de DMV sin hacer filas. Títulos, transferencias, registro, placas y más. Atención en español. Bakersfield, CA.',
 }
 
 const dmvServices = [

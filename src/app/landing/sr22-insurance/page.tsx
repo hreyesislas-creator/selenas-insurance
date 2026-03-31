@@ -5,7 +5,7 @@ import { CTAStrip } from '@/components/sections/CTAStrip'
 export const metadata: Metadata = {
   title: 'SR22 en California el Mismo Día — Selena\'s Insurance',
   description:
-    '¿Licencia suspendida? Tramitamos tu SR22 en California el mismo día y lo enviamos directamente al DMV. Rápido, accesible, atención en español. Moreno Valley, CA.',
+    '¿Licencia suspendida? Tramitamos tu SR22 en California el mismo día y lo enviamos directamente al DMV. Rápido, accesible, atención en español. Bakersfield, CA.',
 }
 
 const trustItems = [

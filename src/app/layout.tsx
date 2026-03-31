@@ -23,11 +23,11 @@ const bodyFont = Barlow({
 export const metadata: Metadata = {
   metadataBase: new URL('https://selenasinsurance.com'),
   title: {
-    default: "Selena's Insurance — Seguros de Auto y Servicios DMV en Moreno Valley, CA",
+    default: "Selena's Insurance — Seguros de Auto y Servicios DMV en Bakersfield, CA",
     template: "%s | Selena's Insurance",
   },
   description:
-    'Seguros de auto accesibles, SR22, servicios de DMV, placas, notario y taxes en Moreno Valley, CA. Atención en español. ¡Llama o mándanos WhatsApp ahora!',
+    'Seguros de auto accesibles, SR22, servicios de DMV, placas, notario y taxes en Bakersfield, CA. Atención en español. ¡Llama o mándanos WhatsApp ahora!',
   keywords: [
     'seguros de auto',
     'auto insurance',
@@ -35,7 +35,7 @@ export const metadata: Metadata = {
     'DMV services',
     'placas California',
     'seguro barato',
-    'Moreno Valley',
+    'Bakersfield',
     'Riverside County',
     'seguro en español',
     'notario',
@@ -48,7 +48,7 @@ export const metadata: Metadata = {
     siteName: "Selena's Insurance",
     title: "Selena's Insurance — Seguros de Auto y Servicios DMV",
     description:
-      'Seguros accesibles y servicios de DMV en un solo lugar. Atención en español. Moreno Valley, CA.',
+      'Seguros accesibles y servicios de DMV en un solo lugar. Atención en español. Bakersfield, CA.',
   },
 }
 

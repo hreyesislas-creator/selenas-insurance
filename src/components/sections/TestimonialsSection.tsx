@@ -3,7 +3,7 @@ import { Star } from 'lucide-react'
 const testimonials = [
   {
     name: 'María G.',
-    location: 'Moreno Valley, CA',
+    location: 'Bakersfield, CA',
     since: 'Cliente desde 2022',
     avatar: 'MG',
     text: 'Excelente servicio. Me ayudaron a conseguir mi seguro el mismo día y a un precio que nunca pensé que podría encontrar. Muy atentos, siempre en español, y sin complicaciones. 100% recomendados.',

@@ -5,13 +5,13 @@ import { Phone, MapPin, Clock } from 'lucide-react'
 import { BUSINESS } from '@/lib/utils'
 
 export const metadata: Metadata = {
-  title: 'Servicios DMV Cerca de Mí — Selena\'s Insurance | Moreno Valley, CA',
+  title: 'Servicios DMV Cerca de Mí — Selena\'s Insurance | Bakersfield, CA',
   description:
-    'Servicios de DMV en Moreno Valley, CA. Placas, registros, títulos, transferencias y más sin hacer filas. Atención en español. Inland Empire.',
+    'Servicios de DMV en Bakersfield, CA. Placas, registros, títulos, transferencias y más sin hacer filas. Atención en español. Inland Empire.',
 }
 
 const trustItems = [
-  'Ubicados en Moreno Valley, CA',
+  'Ubicados en Bakersfield, CA',
   'Servimos todo el Inland Empire',
   'Sin filas — atendemos con cita o sin cita',
   'Todos los trámites DMV disponibles',
@@ -19,7 +19,7 @@ const trustItems = [
 ]
 
 const areas = [
-  'Moreno Valley', 'Riverside', 'Perris', 'Hemet',
+  'Bakersfield', 'Riverside', 'Perris', 'Hemet',
   'San Jacinto', 'Beaumont', 'Banning', 'Redlands',
   'Colton', 'Fontana', 'Corona', 'Menifee',
 ]
@@ -28,7 +28,7 @@ export default function DMVNearYouLanding() {
   return (
     <>
       <LandingHero
-        badge="📍 DMV Cerca de Mí — Moreno Valley"
+        badge="📍 DMV Cerca de Mí — Bakersfield"
         headline={
           <>
             Servicios DMV<br />
@@ -36,7 +36,7 @@ export default function DMVNearYouLanding() {
             en el Inland Empire
           </>
         }
-        subheadline="En Selena's Insurance en Moreno Valley manejamos todos tus trámites del DMV — sin filas, en español y con resultados el mismo día."
+        subheadline="En Selena's Insurance en Bakersfield manejamos todos tus trámites del DMV — sin filas, en español y con resultados el mismo día."
         trustItems={trustItems}
         sourcePage="landing-dmv-near-you"
         landingPage="dmv-near-you"
@@ -53,7 +53,7 @@ export default function DMVNearYouLanding() {
                 className="font-display font-800 mb-6"
                 style={{ fontSize: 'clamp(1.875rem,3.5vw,2.75rem)', color: 'var(--purple-dark)', lineHeight: 1.05, letterSpacing: '-0.025em' }}
               >
-                Estamos en<br />Moreno Valley
+                Estamos en<br />Bakersfield
               </h2>
               <div className="space-y-4 mb-8">
                 {[
@@ -157,7 +157,7 @@ export default function DMVNearYouLanding() {
         </div>
       </section>
 
-      <CTAStrip title="¿Buscas servicios DMV cerca de ti?" subtitle="Estamos en Moreno Valley — te atendemos hoy." />
+      <CTAStrip title="¿Buscas servicios DMV cerca de ti?" subtitle="Estamos en Bakersfield — te atendemos hoy." />
     </>
   )
 }

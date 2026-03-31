@@ -19,7 +19,7 @@ const faqs = [
   },
   {
     q: '¿Puedo renovar mis placas sin ir al DMV?',
-    a: 'Sí. Nosotros manejamos la renovación de placas y registro vehicular sin que hagas fila en el DMV. Es rápido, conveniente y lo hacemos desde nuestra oficina en Moreno Valley.',
+    a: 'Sí. Nosotros manejamos la renovación de placas y registro vehicular sin que hagas fila en el DMV. Es rápido, conveniente y lo hacemos desde nuestra oficina en Bakersfield.',
   },
   {
     q: '¿Cuánto tiempo tarda en activarse mi seguro?',

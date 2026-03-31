@@ -61,7 +61,7 @@ export function HeroSection() {
               }}
             >
               <span className="w-1.5 h-1.5 rounded-full bg-green-400 inline-block" />
-              Moreno Valley, CA — Atención en Español
+              Bakersfield, CA — Atención en Español
             </div>
 
             {/* Main headline */}

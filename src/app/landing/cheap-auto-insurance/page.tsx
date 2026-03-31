@@ -5,7 +5,7 @@ import { CTAStrip } from '@/components/sections/CTAStrip'
 export const metadata: Metadata = {
   title: 'Seguro de Auto Barato en California — Selena\'s Insurance',
   description:
-    'Seguro de auto barato en California desde $0 de enganche. Comparamos múltiples aseguradoras para encontrarte el mejor precio. Atención en español. Moreno Valley, CA.',
+    'Seguro de auto barato en California desde $0 de enganche. Comparamos múltiples aseguradoras para encontrarte el mejor precio. Atención en español. Bakersfield, CA.',
 }
 
 const trustItems = [

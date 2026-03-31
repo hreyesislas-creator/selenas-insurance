@@ -182,7 +182,7 @@ export function Footer() {
             © {new Date().getFullYear()} Selena&apos;s Insurance. Todos los derechos reservados.
           </span>
           <span className="text-xs" style={{ color: 'rgba(255,255,255,0.20)' }}>
-            selenasinsurance.com · Moreno Valley, CA
+            selenasinsurance.com · Bakersfield, CA
           </span>
         </div>
       </div>

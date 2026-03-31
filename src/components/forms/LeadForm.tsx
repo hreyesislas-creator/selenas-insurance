@@ -530,7 +530,7 @@ export function LeadForm({ sourcePage, landingPage }: LeadFormProps) {
               <input
                 {...form4.register('city')}
                 className={inputClass}
-                placeholder="Moreno Valley"
+                placeholder="Bakersfield"
                 autoComplete="address-level2"
               />
             </div>

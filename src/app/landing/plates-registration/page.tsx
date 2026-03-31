@@ -5,12 +5,12 @@ import { CTAStrip } from '@/components/sections/CTAStrip'
 export const metadata: Metadata = {
   title: 'Placas y Registro en California — Selena\'s Insurance | Sin Filas',
   description:
-    'Renueva tus placas y registro vehicular en California sin hacer filas. Rápido, conveniente y en español. Moreno Valley, CA.',
+    'Renueva tus placas y registro vehicular en California sin hacer filas. Rápido, conveniente y en español. Bakersfield, CA.',
 }
 
 const trustItems = [
   'Sin hacer fila en el DMV',
-  'Atendemos en nuestra oficina en Moreno Valley',
+  'Atendemos en nuestra oficina en Bakersfield',
   'Renovamos el mismo día en muchos casos',
   'Aceptamos múltiples formas de pago',
   'Atención en español',

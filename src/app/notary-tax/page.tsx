@@ -8,7 +8,7 @@ import SiteShell from '@/components/layout/SiteShell'
 export const metadata: Metadata = {
   title: 'Notario Público y Preparación de Taxes — Selena\'s Insurance',
   description:
-    'Servicios de notaría pública y preparación de impuestos en Moreno Valley. ITIN disponible. Atención en español.',
+    'Servicios de notaría pública y preparación de impuestos en Bakersfield. ITIN disponible. Atención en español.',
 }
 
 const notaryServices = [

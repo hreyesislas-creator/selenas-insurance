@@ -94,7 +94,7 @@ export function WhyChooseSection() {
                 </div>
                 <div>
                   <div className="text-sm font-700 text-white">Selena&apos;s Insurance</div>
-                  <div className="text-xs" style={{ color: 'rgba(255,255,255,0.50)' }}>Moreno Valley, CA</div>
+                  <div className="text-xs" style={{ color: 'rgba(255,255,255,0.50)' }}>Bakersfield, CA</div>
                 </div>
               </div>
             </div>

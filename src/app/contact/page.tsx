@@ -7,7 +7,7 @@ import SiteShell from '@/components/layout/SiteShell'
 export const metadata: Metadata = {
   title: 'Contacto — Selena\'s Insurance',
   description:
-    'Visítanos en Moreno Valley, CA o contáctanos por teléfono, WhatsApp o email. Atención en español.',
+    'Visítanos en Bakersfield, CA o contáctanos por teléfono, WhatsApp o email. Atención en español.',
 }
 
 export default function ContactPage() {

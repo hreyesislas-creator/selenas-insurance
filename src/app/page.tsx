@@ -14,9 +14,9 @@ import SiteShell from '@/components/layout/SiteShell'
 
 
 export const metadata: Metadata = {
-  title: "Selena's Insurance — Seguros de Auto y Servicios DMV en Moreno Valley, CA",
+  title: "Selena's Insurance — Seguros de Auto y Servicios DMV en Bakersfield, CA",
   description:
-    'Seguros de auto accesibles desde $0 de enganche, SR22, servicios de DMV, placas, notario y taxes. Atención en español. Moreno Valley, CA. ¡Cotiza gratis hoy!',
+    'Seguros de auto accesibles desde $0 de enganche, SR22, servicios de DMV, placas, notario y taxes. Atención en español. Bakersfield, CA. ¡Cotiza gratis hoy!',
 }
 
 export default function HomePage() {

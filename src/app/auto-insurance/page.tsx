@@ -9,7 +9,7 @@ import SiteShell from '@/components/layout/SiteShell'
 
 
 export const metadata: Metadata = {
-  title: 'Seguro de Auto — Selena\'s Insurance | Moreno Valley, CA',
+  title: 'Seguro de Auto — Selena\'s Insurance | Bakersfield, CA',
   description:
     'Seguro de auto accesible en California desde $0 de enganche. Cobertura básica y completa. SR22 disponible. Póliza activa el mismo día. Atención en español.',
 }

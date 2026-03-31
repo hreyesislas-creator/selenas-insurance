@@ -1,6 +1,6 @@
 # Selena's Insurance — Production Codebase
 
-A full-stack bilingual (Spanish-first) lead generation website for a Latino insurance and DMV services business in Moreno Valley, CA. Built for high mobile conversion, local SEO, and Vercel deployment.
+A full-stack bilingual (Spanish-first) lead generation website for a Latino insurance and DMV services business in Bakersfield, CA. Built for high mobile conversion, local SEO, and Vercel deployment.
 
 ---
 
@@ -205,7 +205,7 @@ src/
 |----------|---------|
 | `NEXT_PUBLIC_BUSINESS_PHONE` | `(951) 555-1234` |
 | `NEXT_PUBLIC_BUSINESS_WHATSAPP` | `19515551234` (no + or spaces) |
-| `NEXT_PUBLIC_BUSINESS_ADDRESS` | `123 Main St, Moreno Valley, CA 92551` |
+| `NEXT_PUBLIC_BUSINESS_ADDRESS` | `123 Main St, Bakersfield, CA 92551` |
 | `NEXT_PUBLIC_BUSINESS_HOURS` | `Lun–Vie 9am–6pm · Sáb 9am–3pm` |
 | `NEXT_PUBLIC_BUSINESS_EMAIL` | `info@selenasinsurance.com` |
 | `NEXT_PUBLIC_BUSINESS_MAPS_URL` | Full Google Maps URL |
@@ -341,4 +341,4 @@ Fonts: **Barlow Condensed** (display/headings) + **Barlow** (body) via Google Fo
 
 ## License
 
-Private — all rights reserved. Built for Selena's Insurance, Moreno Valley CA.
+Private — all rights reserved. Built for Selena's Insurance, Bakersfield CA.
